@@ -9,7 +9,7 @@ for (let i = 1; i < 10; i++) {
             document.getElementById('dead').textContent = shot;
             if (shot === 10) {
                 alert('Вы победили!');
-                return document.location.reload();
+                return shot = 0;
             }
         }
         else {
@@ -17,7 +17,7 @@ for (let i = 1; i < 10; i++) {
             document.getElementById('lost').textContent = bossShot;
             if (bossShot === 5) {
                 alert('Поражение((');
-                return document.location.reload();
+                return bossShot = 0;
             }
         }
     }  
