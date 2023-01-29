@@ -1,7 +1,7 @@
-const imgElement = Array.from(document.querySelectorAll('.slider__item'))
-const prev =  document.querySelector('.slider__arrow_prev')
-const next =  document.querySelector('.slider__arrow_next')
-const sliderDot = Array.from(document.querySelectorAll('.slider__dot'))
+const imgElement = Array.from(document.querySelectorAll('.slider__item'));
+const prev =  document.querySelector('.slider__arrow_prev');
+const next =  document.querySelector('.slider__arrow_next');
+const sliderDot = Array.from(document.querySelectorAll('.slider__dot'));
 let index = 0;
 
 sliderDot.forEach(item => {
@@ -22,7 +22,7 @@ prev.onclick = (() => {
 
 function slider(index) {
     for (item of imgElement) {
-        img.forEach(item => item.classList.remove('slider__item_active'))
+        imgElement.forEach(item => item.classList.remove('slider__item_active'))
         sliderDot.forEach(item => item.classList.remove('slider__dot_active'))
         imgElement[index].classList.add('slider__item_active')
         sliderDot[index].classList.add('slider__dot_active')
