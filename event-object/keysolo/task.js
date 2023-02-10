@@ -36,7 +36,7 @@ class Game {
       При неправильном вводе символа - this.fail();
      */
   
-
+  }
   success() {
     this.currentSymbol.classList.add('symbol_correct');
     this.currentSymbol = this.currentSymbol.nextElementSibling;
@@ -96,6 +96,7 @@ class Game {
     this.currentSymbol = this.wordElement.querySelector('.symbol_current');
   }
 }
+
 
 new Game(document.getElementById('game'))
 
