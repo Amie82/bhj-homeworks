@@ -1,0 +1,21 @@
+const rotators = [...document.querySelectorAll('.rotator')];
+
+rotators.forEach((el) => {
+  const childrenElements = [...el.children];
+  changeBlock(childrenElements);
+});
+
+function changeBlock(children) {
+  const elements = children;
+  let counter = 0;
+  setInterval(() => {
+    elements.forEach((el) => el.classList.remove('rotator__case_active'));
+    if (counter < elements.length - 1) {
+      elements[counter + 1].classList.add('rotator__case_active');
+      counter += 1;
+    } else {
+      elements[0].classList.add('rotator__case_active');
+      counter = 0;
+    }
+  }, 1000);
+}
